@@ -1,0 +1,1 @@
+ filtered_by_flag = employee[employee['primary_flag'] == 'Y'][['employee_id', 'department_id']]
