@@ -39,13 +39,9 @@ struct DataPoint {
                     flag = false;
                     break;
                 }
-
-                cout << grid[i][j] << ", ";
             }
-
-            cout << endl;
         }
-        cout << minute << endl;
+
         return (flag) ? minute : -1;
     }
 
