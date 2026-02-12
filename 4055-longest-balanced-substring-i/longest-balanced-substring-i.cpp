@@ -17,14 +17,13 @@ public:
                     maxFreq = freq[s[j]-'a'];
                 }
                 int total = 0;
-                int curr = j-i+1;
 
                 for(auto& x: freq){
                     total = total+x.second;
                 }
 
                 if(total == unique*maxFreq){
-                    ans = max(ans, curr);
+                    ans = max(ans, total);
                 }
             }
         }
