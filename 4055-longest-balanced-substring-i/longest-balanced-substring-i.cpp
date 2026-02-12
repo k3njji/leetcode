@@ -23,7 +23,7 @@ public:
                     total = total+x.second;
                 }
 
-                if(total == unique*maxFreq && total == curr){
+                if(total == unique*maxFreq){
                     ans = max(ans, curr);
                 }
             }
