@@ -7,16 +7,16 @@ public:
             sol[equations[i][1]].push_back({equations[i][0], 1.0 / values[i]});
         }
 
-        for(auto& s: sol){
-            auto& key = s.first;
-            auto& edges = s.second;
+        // for(auto& s: sol){
+        //     auto& key = s.first;
+        //     auto& edges = s.second;
 
-            cout << key << " -> ";
-            for(auto& [neighbor, weight]: edges){
-                cout << "(" << neighbor << ", " << weight << ") ";
-            }
-            cout << endl;
-        }
+        //     cout << key << " -> ";
+        //     for(auto& [neighbor, weight]: edges){
+        //         cout << "(" << neighbor << ", " << weight << ") ";
+        //     }
+        //     cout << endl;
+        // }
         vector<double> ans;
         for(int i = 0; i < queries.size(); i++){
             unordered_set<string> visited;
