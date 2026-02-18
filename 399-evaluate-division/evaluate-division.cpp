@@ -17,6 +17,7 @@ public:
         //     }
         //     cout << endl;
         // }
+        
         vector<double> ans;
         for(int i = 0; i < queries.size(); i++){
             unordered_set<string> visited;
