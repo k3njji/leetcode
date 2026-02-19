@@ -20,7 +20,7 @@ public:
                 ListNode* temp = groupStart;
                 ListNode* prevNode = nextGroup;
 
-                while (temp != nextGroup) {
+                while(temp != nextGroup){
                     ListNode* next = temp->next;
                     temp->next = prevNode;
                     prevNode = temp;
