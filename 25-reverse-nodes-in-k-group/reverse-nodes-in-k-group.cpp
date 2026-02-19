@@ -20,17 +20,16 @@ public:
                 ListNode* temp = groupStart;
                 ListNode* prevNode = nextGroup;
 
-                while(temp != nextGroup){
+                while(count!=0){
                     ListNode* next = temp->next;
                     temp->next = prevNode;
                     prevNode = temp;
                     temp = next;
+                    count--;
                 }
 
                 prev->next = prevNode;
                 prev = groupStart;
-
-                count = 0;
 
                 curr = nextGroup;
             }else{
