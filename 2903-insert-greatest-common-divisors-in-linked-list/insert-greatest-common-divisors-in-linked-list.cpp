@@ -32,7 +32,7 @@ public:
 
 private:
     int gcd(int a, int b){
-        cout << a << b << endl;
+        // cout << a << b << endl;
         while(b!=0){
             int temp = b;
             b = a%b;
