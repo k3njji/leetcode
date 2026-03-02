@@ -6,15 +6,11 @@ class Solution:
 
         for i in range(len(searchWord)):
             temp = []
-            prefix = searchWord[:i+1]
-
             for pr in products:
-                if prefix == pr[:i+1]:
+                if(searchWord[:i+1] == pr[:i+1]):
                     temp.append(pr)
 
-                if len(temp) == 3:
+                if(len(temp) == 3):
                     break
-
             ans.append(temp)
-
         return ans
