@@ -10,11 +10,11 @@ public:
         vector<int> state(numCourses, 0);
 
         for(int i = 0; i < numCourses; i++){
-            if(state[i] == 0){
+            // if(state[i] == 0){
                 if(!traverse(graph, i, state)){
                     return false;
                 }
-            }
+            // }
         }
 
         return true;
