@@ -27,10 +27,9 @@ private:
 
         if(ans.size() <= level){
             ans.push_back({});
+                    ans[level].push_back(curr->val);
+
         }
-
-        ans[level].push_back(curr->val);
-
         traverse(curr->left, level+1, ans);
         traverse(curr->right, level+1, ans);
     }
