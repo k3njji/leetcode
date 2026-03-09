@@ -8,19 +8,19 @@ public:
             temp[arr[i]]++;
         }
 
-        priority_queue<pair<int, int>> max_pq;
+        priority_queue<int> max_pq;
 
         for(const auto& iter: temp){
-            cout << iter.first << iter.second << endl;
-            max_pq.push({iter.second, iter.first});
+            // cout << iter.first << iter.second << endl;
+            max_pq.push(iter.second);
         }
 
         int half = ans/2;
         int count = 0;
 
         while(ans > half){
-        cout << max_pq.top().first << max_pq.top().second << endl;
-            ans -= max_pq.top().first;
+        // cout << max_pq.top().first << max_pq.top().second << endl;
+            ans -= max_pq.top();
             max_pq.pop();
             count++;
         }
