@@ -4,8 +4,6 @@ class Solution:
         res = set()
 
         def backtrack(build, curr):
-            if len(build) > len(nums):
-                return
             
             key = tuple(sorted(build))
             if len(build) <= len(nums) and key not in res:
