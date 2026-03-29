@@ -3,10 +3,12 @@ class Solution:
         ans = []
         res = set()
 
+        nums.sort()
+
         def backtrack(build, curr):
-            
-            key = tuple(sorted(build))
-            if len(build) <= len(nums) and key not in res:
+            key = tuple(build)
+
+            if key not in res:
                 ans.append(build)
                 res.add(key)
             
