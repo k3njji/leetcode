@@ -1,12 +1,12 @@
 class Solution:
     def letterCasePermutation(self, s: str) -> List[str]:
         ans = []
-        res = set()
+        # res = set()
         def btrack(words, curr):
             # print(words)
-            if(len(words) == len(s) and words not in res):
+            if(len(words) == len(s)):
                 ans.append(words)
-                res.add(words)
+                # res.add(words)
                 return
             for i in range(curr, len(s)):
                 if(s[i].isalpha()):
