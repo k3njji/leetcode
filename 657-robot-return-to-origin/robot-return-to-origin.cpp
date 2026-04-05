@@ -16,6 +16,6 @@ public:
             }
         }
 
-        return (x == 0 & y == 0) ? true : false;
+        return x == 0 && y == 0;
     }
 };
