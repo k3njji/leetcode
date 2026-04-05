@@ -1,48 +1,21 @@
 class Solution {
 public:
     bool judgeCircle(string moves) {
-        unordered_map<char, int> tempo;
+        int x = 0;
+        int y = 0;
 
-        for(auto const& mov: moves){
-            if(mov == 'U'){
-                if(tempo['D'] >= 1){
-                    tempo['D']--;
-                }else{
-                    tempo[mov]++;
-                }
-            }
-
-            else if(mov == 'D'){
-                if(tempo['U'] >= 1){
-                    tempo['U']--;
-                }else{
-                    tempo[mov]++;
-                }
-            }
-
-            else if(mov == 'L'){
-                if(tempo['R'] >= 1){
-                    tempo['R']--;
-                }else{
-                    tempo[mov]++;
-                }
-            }
-
-            else if(mov == 'R'){
-                if(tempo['L'] >= 1){
-                    tempo['L']--;
-                }else{
-                    tempo[mov]++;
-                }
+        for(int i = 0; i < moves.size(); i++){
+            if(moves[i] == 'U'){
+                y++;
+            }else if(moves[i] == 'D'){
+                y--;
+            }else if(moves[i] == 'L'){
+                x++;
+            }else if(moves[i] == 'R'){
+                x--;
             }
         }
 
-        for (const auto& pair: tempo){
-            if(pair.second > 0){
-                return false;
-            }
-        }
-
-        return true;
+        return (x == 0 & y == 0) ? true : false;
     }
 };
