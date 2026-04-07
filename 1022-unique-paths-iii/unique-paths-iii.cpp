@@ -19,7 +19,7 @@ public:
         return ans;
     }
 
-    void backtrack(vector<vector<int>>& grid, int x, int y, int zeroCount, int count){
+    void backtrack(vector<vector<int>> grid, int x, int y, int zeroCount, int count){
 
         if(x < 0 || x >= grid.size() || y < 0 || y >= grid[0].size() || grid[x][y] < 0){
             return;
@@ -41,7 +41,5 @@ public:
         backtrack(grid, x-1, y, zeroCount, count);
         backtrack(grid, x, y+1, zeroCount, count);
         backtrack(grid, x, y-1, zeroCount, count);
-
-        grid[x][y] = temp;
     }
 };
