@@ -8,7 +8,7 @@ public:
             reverse*=10;
             int temp = n%10;
             reverse += temp;
-            cout << reverse << endl;
+            // cout << reverse << endl;
             n = n/10;
         }
 
